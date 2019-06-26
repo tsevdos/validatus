@@ -6,7 +6,10 @@
         "targets": {
           "node": 4,
           "browsers": [">0.25%", "not op_mini all"]
-        }
+        },
+        "debug": true,
+        "useBuiltIns": "entry",
+        "corejs": 3
       }
     ]
   ],

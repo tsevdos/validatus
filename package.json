@@ -57,5 +57,8 @@
   },
   "targets": {
     "node": ">=4"
+  },
+  "dependencies": {
+    "core-js": "3.1.4"
   }
 }
