@@ -1,0 +1,14 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "node": 4,
+          "browsers": [">0.25%", "not op_mini all"]
+        }
+      }
+    ]
+  ],
+  "plugins": ["@babel/proposal-object-rest-spread"]
+}

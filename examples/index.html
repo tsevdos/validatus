@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Validatus examples</title>
+    <meta name="description" content="Validatus examples." />
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <h1 class="mt-5 mb-5">Validatus examples</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm mb-5">
+          <form>
+            <div class="form-group">
+              <label htmlFor="email">Email address</label>
+              <input
+                id="email"
+                type="text"
+                name="email"
+                value=""
+                class="form-control"
+                placeholder="Enter email"
+              />
+              <div id="email-required" class="invalid-feedback" style="display:none;">
+                Field is required
+              </div>
+              <div id="email-is-email" class="invalid-feedback" style="display:none;">
+                Must be a valid email address
+              </div>
+              <div id="email-contains" class="invalid-feedback" style="display:none;">
+                Must contain "john" and "@gmail" sub-strings
+              </div>
+              <div id="email-length" class="invalid-feedback" style="display:none;">
+                Must be between 5 and 15 characters
+              </div>
+              <div class="form-group">
+                <label for="email-validation-result">Validation result</label>
+                <textarea class="form-control" id="email-validation-result" rows="8"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label htmlFor="username">Username (latin characters - en-US locale)</label>
+              <input
+                id="username"
+                type="text"
+                name="username"
+                value=""
+                class="form-control"
+                placeholder="Enter username"
+              />
+              <div id="username-required" class="invalid-feedback" style="display:none;">
+                Field is required
+              </div>
+              <div id="username-is-alpha" class="invalid-feedback" style="display:none;">
+                Field must contain only characters from en-US locale
+              </div>
+              <div class="form-group">
+                <label for="username-validation-result">Validation result</label>
+                <textarea class="form-control" id="username-validation-result" rows="6"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label htmlFor="license-plate">License plate</label>
+              <input
+                id="license-plate"
+                type="text"
+                name="license-plate"
+                value=""
+                class="form-control"
+                placeholder="Enter license plate"
+              />
+              <div id="license-plate-required" class="invalid-feedback" style="display:none;">
+                Field is required
+              </div>
+              <div
+                id="license-plate-is-alphanumeric"
+                class="invalid-feedback"
+                style="display:none;"
+              >
+                Field must contain only characters and numbers (en-US locale)
+              </div>
+              <div class="form-group">
+                <label for="license-plate-validation-result">Validation result</label>
+                <textarea
+                  class="form-control"
+                  id="license-plate-validation-result"
+                  rows="6"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label htmlFor="number">Number</label>
+              <input
+                id="number"
+                type="text"
+                name="number"
+                value=""
+                class="form-control"
+                placeholder="Enter a number"
+              />
+              <div id="number-required" class="invalid-feedback" style="display:none;">
+                Field is required
+              </div>
+              <div id="is-number" class="invalid-feedback" style="display:none;">
+                Must be a valid number
+              </div>
+              <div class="form-group">
+                <label for="number-validation-result">Validation result</label>
+                <textarea class="form-control" id="number-validation-result" rows="6"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label htmlFor="contains">Error from configuration</label>
+              <input
+                id="contains"
+                type="text"
+                name="contains"
+                value=""
+                class="form-control"
+                placeholder="Type something.."
+              />
+              <div id="contains-error-div" class="invalid-feedback" style="display:none;"></div>
+              <div class="form-group">
+                <label for="contains-validation-result">Validation result</label>
+                <textarea class="form-control" id="contains-validation-result" rows="6"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
