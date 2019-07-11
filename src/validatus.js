@@ -21,7 +21,7 @@ export default function validatus(validationRules, value) {
   const validationResults = validationRules.reduce((acc, validator) => {
     const validatorWithoutOptions = typeof validator === "string";
     const validatorName = validatorWithoutOptions ? validator : Object.keys(validator)[0];
-    const args = !validatorWithoutOptions && Object.values(validator)[0];
+    const args = !validatorWithoutOptions && Object.keys(validator).map((key) => validator[key])[0];
     const validationResult = validatorWithoutOptions
       ? validators[validatorName](value)
       : validators[validatorName](value, args);
@@ -30,7 +30,9 @@ export default function validatus(validationRules, value) {
   }, {});
 
   return {
-    isValid: Object.values(validationResults).every((val) => val),
+    isValid: Object.keys(validationResults)
+      .map((key) => validationResults[key])
+      .every((val) => val),
     validations: validationResults,
   };
 }
