@@ -5,10 +5,13 @@ node_modules
 dist
 
 # test coverage directory
-stats.json
 coverage
+stats.json
 
 # Logs
 logs
 *.log
 npm-debug.log*
+
+# todo file
+todo.md

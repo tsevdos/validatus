@@ -1,3 +1,4 @@
+/* eslint-disable no-misleading-character-class */
 const englishLocales = ["AU", "GB", "HK", "IN", "NZ", "ZA", "ZM"];
 const arabicLocales = [
   "AE",

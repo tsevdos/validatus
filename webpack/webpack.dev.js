@@ -9,6 +9,8 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = merge(baseConfig, {
+  mode: "development",
+  devtool: "cheap-module-eval-source-map",
   entry: path.resolve("./examples/examples.js"),
   output: {
     path: path.resolve("./examples"),
@@ -17,7 +19,11 @@ module.exports = merge(baseConfig, {
   devServer: {
     overlay: true,
     historyApiFallback: true,
+    disableHostCheck: true,
+    port: 3000,
+    open: true,
+    hot: true,
+    inline: true,
   },
-  devtool: "cheap-module-eval-source-map",
   plugins: [htmlPlugin],
 });
