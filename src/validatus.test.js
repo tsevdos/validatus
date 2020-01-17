@@ -50,14 +50,14 @@ describe("validatus", () => {
         isRequired: true,
         isEmail: true,
         contains: true,
-        hasLength: true,
+        inLength: true,
       },
     };
     const emailValidator = validatus([
       "isRequired",
       "isEmail",
       { contains: ["john", "@gmail"] },
-      { hasLength: { min: 5, max: 15 } },
+      { inLength: { min: 5, max: 15 } },
     ]);
 
     expect(emailValidator("john@gmail.com")).toEqual(expected);
@@ -70,14 +70,14 @@ describe("validatus", () => {
         isRequired: true,
         isEmail: true,
         contains: false,
-        hasLength: false,
+        inLength: false,
       },
     };
     const emailValidator = validatus([
       "isRequired",
       "isEmail",
       { contains: ["john", "@gmail"] },
-      { hasLength: { min: 5, max: 15 } },
+      { inLength: { min: 5, max: 15 } },
     ]);
 
     expect(emailValidator("alanTuring@Yahoo.com")).toEqual(expected);

@@ -12,7 +12,7 @@ const emailValidator = validatus([
   "isRequired",
   "isEmail",
   { contains: ["john", "@gmail"] },
-  { hasLength: { min: 5, max: 15 } },
+  { inLength: { min: 5, max: 15 } },
 ]);
 
 emailInput.addEventListener("input", (e) => {
@@ -28,7 +28,7 @@ emailInput.addEventListener("input", (e) => {
   emailIsRequiredDiv.style.display = validations.isRequired ? "none" : "block";
   emailIsEmailDiv.style.display = validations.isEmail ? "none" : "block";
   emailContainsDiv.style.display = validations.contains ? "none" : "block";
-  emailLengthDiv.style.display = validations.hasLength ? "none" : "block";
+  emailLengthDiv.style.display = validations.inLength ? "none" : "block";
 });
 
 // Username example
