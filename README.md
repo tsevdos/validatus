@@ -1,5 +1,8 @@
 # Validatus
 
+![David](https://img.shields.io/david/tsevdos/validatus)
+![Travis (.org)](https://img.shields.io/travis/tsevdos/validatus)
+
 > An easy to use, declarative, light-weight form validation library with zero dependencies!
 
 ## Intro
