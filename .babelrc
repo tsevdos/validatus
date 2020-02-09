@@ -4,10 +4,10 @@
       "@babel/env",
       {
         "useBuiltIns": "entry",
-        "corejs": 3,
-        "debug": false
+        "corejs": "3.6",
+        "debug": true,
+        "modules": false
       }
     ]
-  ],
-  "plugins": ["@babel/plugin-proposal-class-properties"]
+  ]
 }

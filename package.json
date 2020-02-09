@@ -15,6 +15,7 @@
   "module": "src/index.js",
   "homepage": "https://github.com/tsevdos/validatus",
   "scripts": {
+    "r": "rollup --config",
     "start": "webpack-dev-server --config ./webpack/webpack.dev.js",
     "build": "webpack --config ./webpack/webpack.prod.js",
     "lint": "eslint ./src/**/*.js ./examples/**/*.js",
@@ -31,9 +32,6 @@
     "dist/**/*",
     "README.md"
   ],
-  "targets": {
-    "node": ">=4"
-  },
   "keywords": [
     "validator",
     "validation",
@@ -51,8 +49,8 @@
   },
   "devDependencies": {
     "@babel/core": "7.8.4",
-    "@babel/plugin-proposal-class-properties": "7.8.3",
     "@babel/preset-env": "7.8.4",
+    "@rollup/plugin-node-resolve": "7.0.0",
     "babel-eslint": "10.0.3",
     "babel-loader": "8.0.6",
     "eslint": "6.8.0",
@@ -64,6 +62,9 @@
     "jest": "25.1.0",
     "npm-run-all": "4.1.5",
     "prettier": "1.19.1",
+    "rollup": "1.31.0",
+    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-serve": "1.0.1",
     "webpack": "4.41.5",
     "webpack-cli": "3.3.10",
     "webpack-dev-server": "3.10.1",
